@@ -350,6 +350,7 @@ header nav .form i{
     background-size: cover;
     overflow: hidden;
     z-index: 0;
+
 }
 .design .overlay{
     position: absolute;
@@ -413,6 +414,7 @@ header nav .form i{
 .portfolio{
     padding-top:100px;
     padding-bottom:100px;
+    margin-bottom: 100px;
 }
 .portfolio .shuffle{
     display: flex;
@@ -504,6 +506,7 @@ header nav .form i{
 .video{
     position: relative;
 }
+
 .video:before{
     content: "";
     height:100%;
@@ -526,6 +529,7 @@ header nav .form i{
     color: white;
     text-align: center;
 }
+
 .video .text h2{
     margin: 0 0 30px;
     font-weight: normal;
@@ -541,7 +545,18 @@ header nav .form i{
     padding: 10px 20px;
     text-transform: uppercase;
 }
-
+@media (max-width: 767px) {
+    .video .text{
+        height:150px;
+        padding:20px;
+    }
+    .video .text h2{
+        margin: 0 0 10px;
+    }
+    .video .text p{
+        margin-bottom: 10px;
+    }
+}
 /* < ----------start about ----------- > */
 .about{
     padding-top: 100px;
@@ -627,3 +642,361 @@ header nav .form i{
     font-size:14px;
 }
 /* < ----------  end stats ----------- > */
+
+/* < ----------start skills ----------- > */
+.skills{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.skills .container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.skills .container .col{
+    position:relative;
+    margin-bottom:100px;
+}
+@media (min-width: 992px){
+    .skills .container .col{
+        flex-basis:45%;
+    }
+    .skills .container .col{
+        margin-bottom:0px;
+    }
+}
+.skills .col .text{
+    text-align: center;
+    padding: 10px;
+    margin-bottom:30px;
+}
+.skills .col .text h3{
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+.skills .col .text p{
+    max-width: 100%;
+    color: #999;
+}
+.skills .col .box .person{
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+}
+.skills .col .box .person img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 30px;
+}
+@media (max-width: 767px) {
+    .skills .col .box .person{
+        flex-direction: column;
+        text-align: center;
+    }
+    .skills .col .box .person img{
+        margin: 20px auto;
+    }
+}
+.skills .col .box .person .comment{
+    position: relative;
+}
+.skills .col .box .person .comment:before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 0.5px;
+    width: 100%;
+    background-color:#ccc;
+}
+.skills .col .box .person .comment p:first-child{
+    line-height:2;
+}
+.skills .col .box .person .comment p:last-child{
+    color: #888;
+    text-align: right;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.skills .col .bullets{   
+    min-width: 60px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex
+;
+    justify-content: space-between;
+}
+.skills .col .bullets li{
+    width:15px;
+    height:15px;
+    border:2px solid var(--main-color);
+    border-radius:50%;
+    
+}
+.skills .col .bullets li.active{
+    background-color: var(--main-color);
+}
+@media (max-width: 767px){
+    .skills .col .bullets{
+        min-width:40px;
+        margin-bottom:15px;
+    }
+    .skills .col .bullets li{
+        width:10px;
+        height:10px;
+        border:1px solid var(--main-color);
+    }
+}
+.skills .col .prog-holder{
+    margin-bottom:40px;
+}
+.skills .col .prog-holder h4{
+    margin-bottom:15px;
+    font-weight:normal;
+    text-transform:uppercase;
+}
+.skills .col .prog-holder .prog{
+    height:30px;
+    background-color:#dedadc;
+}
+.skills .col .prog-holder .prog span{
+    display:block;
+    background-color:var(--main-color);
+    height:30px;
+    position:relative;
+}
+.skills .col .prog-holder .prog span:before{
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: -43px;
+    right: -19px;
+    padding: 4px 0;
+    width: 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+.skills .col .prog-holder .prog span:after{
+    content:" ";
+    position:absolute;
+    border-style:solid;
+    border-width:8px;
+    border-color:black transparent transparent transparent;
+    right:-8px;
+    top:-15px;
+}
+/* < ----------  end skills ----------- > */
+
+/* < ----------start quote ----------- > */
+.quote{
+    margin-top:100px;
+    padding-top:100px;
+    padding-bottom:100px;
+    position:relative;
+    background-image:url(../images/quote.jpg);
+    background-size:cover;
+}
+.quote:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(0 0 0 / 70%);
+}
+.quote .container{
+    color:white;
+    position:relative;
+    text-align:center;
+}
+.quote .container p{
+    font-size: 30px;
+    line-height: 1.6;
+
+}
+.quote .container p:before{
+    content: open-quote;
+}
+.quote .container p:after{
+    content: close-quote;
+}
+.quote .container span{
+    margin: 15px auto;
+}
+/* < ----------  end quote ----------- > */
+
+/* < ----------start pricing ----------- > */
+.pricing{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.pricing .plans{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    grid-column-gap:25px;
+    grid-row-gap:25px;
+}
+.pricing .plans .plan{
+    background-color: #fcfcfc;
+    text-align: center;
+    border-top: 1px solid var(--main-color);
+    transition: 0.3s;
+}
+.pricing .plans .plan:hover{
+    transform:scale(1.02);
+    background-color: #eee;
+}
+.pricing .plans .plan .head{
+    border-bottom: 1px solid var(--main-color);
+    padding: 30px 0;
+}
+.pricing .plans .plan .head h4{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+.pricing .plans .plan .head span{
+    font-size: 56px;
+    font-weight: 700;
+    position: relative;
+}
+.pricing .plans .plan .head span:before{
+    content: "$";
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.pricing .plans .plan .head span:after{
+    content: "/mo";
+    font-weight: 700;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: -50px;
+    text-transform: uppercase;
+}
+.pricing .plans .plan ul li{
+    padding: 20px 0;
+    width: 150px;
+    margin: 0 auto;
+}
+.pricing .plans .plan ul li:not(:last-child) {
+    border-bottom: 1.5px solid var(--main-color);
+}
+.pricing .plans .plan .foot{
+    border-top: 1px solid var(--main-color);
+    padding: 50px 0;
+}
+.pricing .plans .plan .foot button{
+    padding: 15px 30px;
+    border:0.5px solid var(--main-color);
+    border-radius:4px;
+}
+.pricing .container .butt{
+    text-align: center;
+    padding: 20px 0;
+}
+.pricing .container .butt p{
+    font-size: 24px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.pricing .container .butt button{
+    border:none;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    color:white;
+    font-size:16px;
+    font-weight:700;
+    border-radius:4px;
+}
+/* < ----------  end pricing ----------- > */
+
+/* < ----------start email ----------- > */
+.subscribe{
+    padding-top:100px;
+    padding-bottom:100px;
+    background-image: url(../images/subscribe.jpg);
+    background-size:cover;
+    position:relative;
+    color:white;
+}
+.subscribe:before{
+    content: " ";
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background-color: rgb(0 0 0 / 50%);
+}
+.subscribe .container {
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+@media (max-width: 991px){
+    .subscribe .container{
+        flex-direction:column;
+    }
+}
+.subscribe form{
+    display:flex;
+    position:relative;
+    width:500px;
+    max-width:100%;
+}
+.subscribe form i{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:25px;
+}
+.subscribe form input[type="email"]{
+    border: 1px solid white;
+    border-right: none;
+    background: none;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color);
+    width:calc(100% - 130px);
+}
+.subscribe form input[type="submit"]{
+    width:130px;
+    background-color: var(--main-color);
+    color:white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-left:none;
+    text-transform:uppercase;
+}
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus{
+    outline:none;
+}
+.subscribe form ::placeholder{
+    color:white;
+}
+.subscribe p{
+    line-height:2;
+    margin-left:50px;
+}
+@media (max-width: 991px){
+    .subscribe p{
+        margin: 30px 0 0 ;
+        text-align:center;
+    }
+}
+/* < ----------  end email ----------- > */
