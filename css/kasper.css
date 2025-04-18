@@ -194,7 +194,7 @@ header nav .form i{
 /* < ----------     start landing ----------- > */
 .landing{
     min-height: 100vh;
-    background-image:url(../images/landing.jpg);
+    background-image:url(../images/landing-1.jpg);
     background-color:#353564;
     background-size: cover;
     position: relative;
@@ -210,7 +210,7 @@ header nav .form i{
 
 .landing .text{
     position: absolute;
-    left: 0;
+    left: 5%;
     top: 50%;
     transform: translateY(-50%);
     color: white;
@@ -248,6 +248,7 @@ header nav .form i{
     transform: translateY(-50%);
     color:#ddd;
     font-size:40px;
+    cursor: pointer;
 }
 .landing .fa-angle-left{
     left:20px;
@@ -255,8 +256,8 @@ header nav .form i{
 .landing .fa-angle-right{
     right:20px;
 }
-.landing .bullets{   
-    min-width:60px;
+.landing .landing-bullets{   
+    min-width:80px;
     margin-bottom:30px;
     position: absolute;
     bottom: 0;
@@ -265,22 +266,25 @@ header nav .form i{
     display:flex;
     justify-content:space-between;
 }
-.landing .bullets li{
-    width:15px;
-    height:15px;
+.landing .landing-bullets li{
+    width: 15px;
+    height: 15px;
     border:2px solid var(--main-color);
     border-radius:50%;
+    cursor: pointer;
+    /* transition: 0.1s; */
     
 }
-.landing .bullets li.active{
+.landing .landing-bullets li.active{
     background-color: var(--main-color);
+    transform: scale(1.2);
 }
 @media (max-width: 767px){
-    .landing .bullets{
+    .landing .landing-bullets{
         min-width:40px;
         margin-bottom:15px;
     }
-    .landing .bullets li{
+    .landing .landing-bullets li{
         width:10px;
         height:10px;
         border:1px solid var(--main-color);
@@ -416,12 +420,14 @@ header nav .form i{
     padding-bottom:100px;
     margin-bottom: 100px;
 }
+
 .portfolio .shuffle{
     display: flex;
     justify-content:center;
 }
 .portfolio .container ul li{
     padding:10px;
+    cursor: pointer;
     
 }
 .portfolio .container ul li.active{
@@ -441,6 +447,10 @@ header nav .form i{
     flex-basis:25%;
     position:relative;
     overflow:hidden;
+    display: none;
+}
+.portfolio .images-container .active{
+    display: block;
 }
 
 
@@ -772,6 +782,8 @@ header nav .form i{
     background-color:var(--main-color);
     height:30px;
     position:relative;
+    width: 0px;
+    transition: 1s;
 }
 .skills .col .prog-holder .prog span:before{
     content: attr(data-progress);

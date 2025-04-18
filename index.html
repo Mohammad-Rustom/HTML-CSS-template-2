@@ -22,12 +22,12 @@
         <nav>
             <i class="fas fa-bars toggle-menu"></i>
             <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="form">
                 <i class="fas fa-search"></i>
@@ -38,7 +38,7 @@
 <!-- < -----   End Header ----- > -->
 
 <!-- < -----   Start Landing ----- > -->
-<div class="landing">
+<div class="landing" id="home">
     <div class="overlay"></div>
     <div class="text">
         <div class="content">
@@ -52,18 +52,21 @@
             </p>
         </div>
     </div>
-    <i class="fas fa-angle-left change-bg fa-2x"></i>
-    <i class="fas fa-angle-right change-bg fa-2x"></i>
-    <ul class="bullets">
-        <li></li>
-        <li class="active"></li>
-        <li></li>
+    <i class="fas fa-angle-left swap-left change-bg fa-2x"></i>
+    <i class="fas fa-angle-right swap-right change-bg fa-2x"></i>
+    <ul class="landing-bullets">
     </ul>
 </div>
 <!-- < -----     End Landing ----- > -->
 
 <!-- < -----   Start services ----- > -->
-<div class="services">
+<div class="services" id="services">
+            <div class="main-heading">
+                <h2>Services</h2>
+                <p>
+                    Our Main Services
+                </p>
+            </div>
     <div class="container">
 
         <div class="service-container">
@@ -121,7 +124,7 @@
 <!-- < -----     End services ----- > -->
 
 <!-- < -----   Start design ----- > -->
-<div class="design">
+<div class="design" >
     <div class="overlay"></div>
     <img src="images/mobile.png">
     <div class="box">
@@ -153,7 +156,7 @@
 <!-- < -----     end design ----- > -->
 
 <!-- < -----   Start portfolio ----- > -->
-<div class="portfolio">
+<div class="portfolio" id="portfolio">
     <div class="container">
         <div class="main-heading">
             <h2>Portfolio</h2>
@@ -165,68 +168,68 @@
             </p>
         </div>
         <ul class="shuffle">
-            <li class="active">All</li>
-            <li>App</li>
-            <li>Photo</li>
-            <li>Web</li>
-            <li>Print</li>
+            <li data-category="all" class="active" >All</li>
+            <li data-category="app">App</li>
+            <li data-category="photo">Photo</li>
+            <li data-category="web">Web</li>
+            <li data-category="print">Print</li>
         </ul>
     </div>
     <div class="images-container">
-        <div class="box">
+        <div class="box app all active">
             <img src="images/shuffle-01.jpg" alt=""/>
             <div class="description">
                 <h4 class="img-name">Awesome Image</h4>
-                <p class="img-category">Photography</p>
+                <p class="img-category">App</p>
             </div>
         </div>
-        <div class="box">
+        <div class="box photo all active">
                 <img src="images/shuffle-02.jpg" alt=""/>
                 <div class="description">
                     <h4 class="img-name">Awesome Image</h4>
-                    <p class="img-category">Photography</p>
+                    <p class="img-category">Photo</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box app all active">
                     <img src="images/shuffle-03.jpg" alt=""/>
                     <div class="description">
                         <h4 class="img-name">Awesome Image</h4>
-                        <p class="img-category">Photography</p>
+                        <p class="img-category">App</p>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box web all active">
                         <img src="images/shuffle-04.jpg" alt=""/>
                         <div class="description">
                             <h4 class="img-name">Awesome Image</h4>
-                            <p class="img-category">Photography</p>
+                            <p class="img-category">Web</p>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box print all active">
                             <img src="images/shuffle-05.jpg" alt=""/>
                             <div class="description">
                                 <h4 class="img-name">Awesome Image</h4>
-                                <p class="img-category">Photography</p>
+                                <p class="img-category">Print</p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div class="box web all active">
                                 <img src="images/shuffle-06.jpg" alt=""/>
                                 <div class="description">
                                     <h4 class="img-name">Awesome Image</h4>
-                                    <p class="img-category">Photography</p>
+                                    <p class="img-category">Web</p>
                                 </div>
                             </div>
-                            <div class="box">
+                            <div class="box print all active">
                                     <img src="images/shuffle-07.jpg" alt=""/>
                                     <div class="description">
                                         <h4 class="img-name">Awesome Image</h4>
-                                        <p class="img-category">Photography</p>
+                                        <p class="img-category">Print</p>
                                     </div>
                                 </div>
-                                <div class="box">
+                                <div class="box photo all active">
                                         <img src="images/shuffle-08.jpg" alt=""/>
                                         <div class="description">
                                             <h4 class="img-name">Awesome Image</h4>
-                                            <p class="img-category">Photography</p>
+                                            <p class="img-category">Photo</p>
                                         </div>
                                     </div>
                                                                                                                 
@@ -249,7 +252,7 @@
 <!-- < ----- end video ----- > -->
 
 <!-- < -----Start about ----- > -->
-<div class="about">
+<div class="about" id="about">
     <div class="container">
         <div class="main-heading">
             <h2>About us</h2>
@@ -270,22 +273,22 @@
     <div class="container">
         <div class="box">
             <i class="fas fa-mug-hot"></i>
-            <div class="number">1.236</div>
+            <div class="number" data-value ="1236">0</div>
             <p>Coffee Drinks</p>
         </div>
         <div class="box">
             <i class="fas fa-folder"></i>
-            <div class="number">256</div>
+            <div class="number" data-value ="256">0</div>
             <p>Completed Projects</p>
         </div>
         <div class="box">
             <i class="fas fa-envelope"></i>
-            <div class="number">1,743</div>
+            <div class="number" data-value ="1743">0</div>
             <p>Mail Sent</p>
         </div>
         <div class="box">
         <i class="fas fa-trophy"></i>
-        <div class="number">17</div>
+        <div class="number"  data-value ="17">0</div>
         <p>Awards Received</p>
         </div>
     </div>
@@ -341,7 +344,7 @@
                 <li></li>
             </ul>
         </div>
-        <div class="col">
+        <div class="col prog-col">
             <div class="text">
                 <h3>skiils</h3>
                 <p>
@@ -354,25 +357,25 @@
             <div class="prog-holder">
                 <h4>adobe</h4>
                 <div class="prog">
-                    <span style="width: 90%" data-progress="90%"></span>
+                    <span  data-progress="90%"></span>
                 </div>
             </div>
             <div class="prog-holder">
                 <h4>html &amp; css</h4>
                 <div class="prog">
-                    <span style="width: 85%" data-progress="85%"></span>
+                    <span data-progress="85%"></span>
                 </div>
             </div>
             <div class="prog-holder">
                 <h4>javascript</h4>
                 <div class="prog">
-                    <span style="width: 80%" data-progress="80%"></span>
+                    <span data-progress="80%"></span>
                 </div>
             </div>
             <div class="prog-holder">
                 <h4>php</h4>
                 <div class="prog">
-                    <span style="width: 90%" data-progress="90%"></span>
+                    <span data-progress="90%"></span>
                 </div>
             </div>
         </div>
@@ -395,7 +398,7 @@
 <!-- < -----  end quote ----- > -->
 
 <!-- < -----Start pricing ----- > -->
-<div class="pricing">
+<div class="pricing" id="pricing">
     <div class="container">
         <div class="main-heading">
             <h2>Pricing</h2>
@@ -503,7 +506,7 @@
 <!-- < -----  end email ----- > -->
 
 <!-- < -----Start contact ----- > -->
-<div class="contact">
+<div class="contact" id="contact">
     <div class="container">
         <div class="main-heading">
             <h2>contact us</h2>
@@ -560,5 +563,6 @@
     </div>
 </div>
 <!-- < -----  end footer ----- > -->
+ <script src="js/main.js"></script>
 </body>
 </html>
