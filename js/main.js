@@ -13,7 +13,31 @@ let statsBoxs = document.querySelectorAll(".stats .number");
 started = false ;
 
 let skillSection = document.querySelector(".skills .prog-col");
-let spans = document.querySelectorAll(".skills .prog-col span")
+let spans = document.querySelectorAll(".skills .prog-col span");
+
+let headerlis = document.querySelectorAll('header li a');
+
+
+
+// header ul ///////////////////
+headerlis.forEach((li) => {
+    li.onclick = function() {
+        removeActive(headerlis);
+        addActive(this);
+    }
+})
+
+window.addEventListener("scroll", function(){
+    if(this.window.scrollY === 0){
+        removeActive(headerlis);
+        addActive(headerlis[0])
+    }
+})
+
+
+
+
+
 
 
 //Enabling landing background slider : bullets & Arrows left/right
@@ -52,17 +76,6 @@ swapRight.onclick = function(){
 }
 
 
-
-// ///////////////////// All Functions ////////////////////////////
-function addActive(el){
-    el.classList.add("active");
-}
-function removeActive(els){
-    els.forEach((el) => el.classList.remove("active")
-    )
-}
-
-
 //enhacements for portfolio section 
 
 for (let i=0 ; i<portfolioLis.length;i++){
@@ -91,6 +104,8 @@ window.addEventListener("scroll", function(){
     }
 })
 
+
+
 function startCount(el) {
 let goal = el.dataset.value;
 let count = setInterval(() => {
@@ -111,3 +126,13 @@ window.addEventListener("scroll", function(){
         })
     }
 })
+
+
+// ///////////////////// All Functions ////////////////////////////
+function addActive(el){
+    el.classList.add("active");
+}
+function removeActive(els){
+    els.forEach((el) => el.classList.remove("active")
+    )
+}
